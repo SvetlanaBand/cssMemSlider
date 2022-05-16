@@ -161,6 +161,17 @@
   
   @media (max-width: 767px) {
     .text-items {
-      font-size: 0.7em;
+      font-size: 0.9em;
+    }
+    .container {
+      flex-direction: row;
+    }
+    .text {
+      width: 100%;
+    }
+    .controls {
+      width: 20%;
+      margin: 0 auto;
+      padding-bottom: 2%;
     }
   }
