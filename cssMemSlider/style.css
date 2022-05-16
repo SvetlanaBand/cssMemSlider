@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main {
+    width: 100%;
+    height: 100vh;
+    padding: 3% 8% 0 8%;
+    background: rgb(145, 172, 150);
+  }
+  
+  .wrapper {
+    margin: 0 auto;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    
+  }
+  
+  .slider {
+    width: 100%;
+    border-radius: 2em;
+    overflow: hidden;
+    max-height: 500px;
+    margin-bottom: 1em;
+  }
+  
+  .slider-items {
+    width: 500%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    transition: all 1s;
+
+  }
+  
+  .slider-item {
+    width: 20%;
+    border-radius: 10px;
+  }
+  
+  .slider-item-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .text {
+    width: 75%;
+    overflow: hidden;
+    margin-bottom: 1em;
+  }
+  
+  .text-items {
+    width: 500%;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 1.25em;
+    transition: all 1s;
+  }
+  
+  .text-item {
+    width: 25%;
+  }
+  
+  .controls {
+    width: 25%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-right: 0px;
+  }
+  
+  input {
+    visibility: hidden;
+  }
+  
+  
+  #switch1:checked ~ .container .slider .slider-items {
+    margin-left: 0;
+  }
+  #switch2:checked ~ .container .slider .slider-items {
+    margin-left: -100%;
+  }
+  #switch3:checked ~ .container .slider .slider-items {
+    margin-left: -200%;
+  }
+  #switch4:checked ~ .container .slider .slider-items {
+    margin-left: -300%;
+  }
+  #switch5:checked ~ .container .slider .slider-items {
+    margin-left: -400%;
+  }
+  
+  #switch1:checked ~ .container .text .text-items {
+    margin-left: 0;
+  }
+  #switch2:checked ~ .container .text .text-items {
+    margin-left: -100%;
+  }
+  #switch3:checked ~ .container .text .text-items {
+    margin-left: -200%;
+  }
+  #switch4:checked ~ .container .text .text-items {
+    margin-left: -300%;
+  }
+  #switch5:checked ~ .container .text .text-items {
+    margin-left: -400%;
+  }
+  #switch1:checked ~ .container .controls #point1 {
+    background: rgb(81, 108, 109);
+  }
+  #switch2:checked ~ .container .controls #point2 {
+    background: rgb(81, 108, 109);
+  }
+  #switch3:checked ~ .container .controls #point3 {
+    background: rgb(81, 108, 109);
+  }
+  #switch4:checked ~ .container .controls #point4 {
+    background: rgb(81, 108, 109);
+  }
+  #switch5:checked ~ .container .controls #point5 {
+    background: rgb(81, 108, 109);
+  }
+  
+  label {
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+    padding-left: 0.5em;
+    padding-top: 0.15em;  
+  }
+  
+  .point {
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 0.3em;
+    border: solid 0.135em rgb(50, 205, 205);
+    background: rgb(50, 205, 205);
+    transition: all 0.4s;
+  }
+  
+  label:hover .point {
+    background: white;
+    border: solid 0.135em white;
+  }
+  
+  label:active .point {
+    transform: scale(0.8);
+  }
+  
+  @media (max-width: 767px) {
+    .text-items {
+      font-size: 0.7em;
+    }
+  }
